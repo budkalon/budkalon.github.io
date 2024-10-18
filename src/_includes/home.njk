@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Budkalon's Personal Website</title>
+<title>{{ title}}</title>
 </head>
 
 <body>
 	<div id="nyawatama">
 		{% include 'header.njk' %}
 
-		<section id="awaktama">
+		<main id="awaktama">
 			<section id="beungeut">
 				<div id="calawakan" class="kokolom">
 					<div class="kolom kiri">
@@ -347,24 +347,9 @@
 					</div>
 				</div>
 			</section>
-		</section>
+		</main>
 
-		<footer id="sukutama">
-			<div class="kokolom">
-				<div class="kolom kiri">
-                    Budkalon's Personal Website
-					Copyright&copy;2024, Budkalon Zetya. All rights reserved.
-				</div>
-				<div class="kolom kanan">
-					<ul class="larink small">
-                        <li class="navan"><a href="mailto:budkalon.zetya+web@gmail.com">Email</a></li>
-                        <li class="navan"><a href="https://fb.com/budkalon">Facebook</a></li>
-                        <li class="navan"><a href="https://x.com/budkalon">Xwitter</a></li>
-                        <li class="navan"><a href="https://youtube.com/@budkalon">YouTube</a></li>
-                    </ul>
-				</div>
-			</div>
-		</footer>
+		{% include 'footer.njk' %}
 	</div>
 </body>
 </html>
