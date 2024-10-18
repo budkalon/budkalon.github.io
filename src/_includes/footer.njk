@@ -2,14 +2,36 @@
     <div class="kokolom">
         <div class="kolom kiri">
             Budkalon's Personal Website
-            Copyright&copy;2024, Budkalon Zetya. All rights reserved.
+            Copyright&copy;{{ tahunIni }}, Budkalon Zetya. All rights reserved.
         </div>
         <div class="kolom kanan">
+            {% set socmed = [
+                { 
+                    href: 'mailto:budkalon.zetya+web@gmail.com', 
+                    text: 'Email' 
+                },
+                { 
+                    href: 'https://fb.com/budkalon', 
+                    text: 'Facebook' 
+                },
+                { 
+                    href: 'https://x.com/budkalon', 
+                    text: 'Xwitter' 
+                },
+                { 
+                    href: 'https://bsky.app/profile/budkalon.bsky.social', 
+                    text: 'Bluesky' 
+                },
+                { 
+                    href: 'https://youtube.com/@budkalon', 
+                    text: 'YouTube' 
+                }
+            ] %}
+            
             <ul class="larink small">
-                <li class="navan"><a href="mailto:budkalon.zetya+web@gmail.com">Email</a></li>
-                <li class="navan"><a href="https://fb.com/budkalon">Facebook</a></li>
-                <li class="navan"><a href="https://x.com/budkalon">Xwitter</a></li>
-                <li class="navan"><a href="https://youtube.com/@budkalon">YouTube</a></li>
+                {% for link in socmed %}
+                    <li class="navan"><a target="_blank" href="{{ link.href }}">{{ link.text }}</a></li>
+                {% endfor %}
             </ul>
         </div>
     </div>

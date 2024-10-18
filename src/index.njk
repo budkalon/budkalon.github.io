@@ -1,0 +1,276 @@
+---
+layout: 'home.njk'
+title: Budkalon's Site
+pageType: home
+---
+<section id="awaktama">
+    <section id="beungeut">
+        <div id="calawakan" class="kokolom">
+            <div class="kolom kiri">
+                <div id="kumenal">
+                    <h1>Budkalon</h1>
+                    <p class="kecil">/bud.ka.lo:n/</p>
+                    <p>A comic artist who loves Nusantara cultures and spend too much time on doing worldbuilding, conlanging, and illustration.</p>
+                    <ul class="totombol vertikal">
+                        <li class="tombolan"><a title="my works" href="#catang">Works</a></li>
+                        <li class="tombolan"><a title="my VGen page" href="https://vgen.co/budkalon" target="_blank">Commission</a></li>
+                    </ul>
+                </div>
+                <div id="kumeklik">
+                    {% set socmed = [
+                        { 
+                            href: 'mailto:budkalon.zetya+web@gmail.com', 
+                            text: 'Email' 
+                        },
+                        { 
+                            href: 'https://fb.com/budkalon', 
+                            text: 'Facebook' 
+                        },
+                        { 
+                            href: 'https://x.com/budkalon', 
+                            text: 'Xwitter' 
+                        },
+                        { 
+                            href: 'https://bsky.app/profile/budkalon.bsky.social', 
+                            text: 'Bluesky' 
+                        },
+                        { 
+                            href: 'https://youtube.com/@budkalon', 
+                            text: 'YouTube' 
+                        }
+                    ] %}
+                    
+                    <ul class="totombol">
+                        {% for link in socmed %}
+                            <li class="tombolan"><a  title="contact me on my {{ link.text }}" target="_blank" href="{{ link.href }}">{{ link.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="kolom kanan kosong">
+                [all in one]
+            </div>
+        </div>
+    </section>
+
+    <section id="catang">
+        <div id="catanghulu">
+            <h2>My Works</h2>
+            <p>I mainly work on three things: Comic, Illustration, and Worldbuilding.</p>
+            <ul class="totombol">
+                <li class="tombolan"><a href="#gawe-komik">Comic</a></li>
+                <li class="tombolan"><a href="#gawe-gambar">Illustration</a></li>
+                <li class="tombolan"><a href="#gawe-cipbun">Worldbuilding</a></li>
+            </ul>
+        </div>
+        <div id="catangisi">
+            <div id="gawe-komik" class="gawe-hareup">
+                <h3>Comic</h3>
+                <p>Several comics I made between 2018--present. I keep the language as it is since the language I used for the comic is the one that I intended on the planning.</p>
+                <div id="galeri-komik" class="galeri">
+                    <ul class="galeri sama sizeA4 port">
+                        {% set gaweKomik = [
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            }
+                        ] %}
+
+                        {% for link in gaweKomik %}
+                            <li class="keluku">
+                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                    <div class="wadah-img">
+                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                    </div>
+                                    <div class="wadah-takarir">
+                                        <p class="hulu-taka">
+                                            {{imgCap}}
+                                        </p>
+                                        <p>
+                                            {{imgDesc}}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
+            </div>
+            <div id="gawe-gambar" class="gawe-hareup">
+                <h3>Illustration</h3>
+                <p>I have several kind of rendering styles.</p>
+                <div id="galeri-gambar" class="galeri">
+                    <ul class="galeri">
+                        {% set gaweIlus = [
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            }
+                        ] %}
+
+                        {% for link in gaweIlus %}
+                            <li class="keluku">
+                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                    <div class="wadah-img">
+                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                    </div>
+                                    <div class="wadah-takarir">
+                                        <p class="hulu-taka">
+                                            {{imgCap}}
+                                        </p>
+                                        <p>
+                                            {{imgDesc}}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p class="more-gawe"><a href="/works/illustration">more illustration works ></a></p>
+            </div>
+            <div id="gawe-cipbun" class="gawe-hareup">
+                <h3>Worldbuilding</h3>
+                <p>My main hobby is actually doing fantasy worldbuilding. My main worldbuilding project is Tagalbuni, but there are also several other projects I am currently developing.</p>
+                <div id="galeri-cipbun" class="galeri">
+                    <ul class="galeri size16-19">
+                        {% set gaweCipbun = [
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            },
+                            { 
+                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
+                                linkTitle: 'Email' ,
+                                imgSrc: '',
+                                imgAlt: '',
+                                imgCap: '',
+                                imgDesc: ''
+                            }
+                        ] %}
+
+                        {% for link in gaweCipbun %}
+                            <li class="keluku">
+                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                    <div class="wadah-img">
+                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                    </div>
+                                    <div class="wadah-takarir">
+                                        <p class="hulu-taka">
+                                            {{imgCap}}
+                                        </p>
+                                        <p>
+                                            {{imgDesc}}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p class="more-gawe"><a href="/works/worldbuilding">more worldbuilding works ></a></p>
+            </div>
+        </div>
+    </section>
+</section>

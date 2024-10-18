@@ -6,10 +6,22 @@
         {%- endif -%}
     </div>
     <nav id="navigasina">
-        {% set yourLinksArray = [
-            { href: '/about', text: 'About' },
-            { href: '/faq', text: 'FAQ' }
-        ] %}
-        {% include "list.njk" links=yourLinksArray %}
+        <ul id="larink">
+            {%- if "/about" in page.url -%}
+            {%- else -%}
+                <li class="navan"><a href="/about">About</a></li>
+            {%- endif -%}
+
+            {%- if "/faq" in page.url -%}
+            {%- else -%}
+                <li class="navan"><a href="/faq">FAQ</a></li>
+            {%- endif -%}
+
+            {%- if "/blog" in page.url -%}
+            {%- else -%}
+                <li class="navan"><a href="/blog">Blog</a></li>
+            {%- endif -%}
+            
+        </ul>
     </nav>
 </header>

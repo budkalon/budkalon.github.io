@@ -9,6 +9,7 @@ css
 .env
 .log
 .vs
+.obsidian
 
 # macOS related files
 .DS_Store
