@@ -16,7 +16,7 @@ pageType: home
                         <li class="tombolan"><a title="my VGen page" href="https://vgen.co/budkalon" target="_blank">Commission</a></li>
                     </ul>
                 </div>
-                <div id="kumeklik">
+                <div id="kumeklik">a 
                     {% set socmed = [
                         { 
                             href: 'mailto:budkalon.zetya+web@gmail.com', 
@@ -75,8 +75,8 @@ pageType: home
                                 linkTitle: 'Email' ,
                                 imgSrc: '',
                                 imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
+                                imgCap: 'yeyo',
+                                imgDesc: 'hooo'
                             },
                             { 
                                 linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
@@ -114,16 +114,16 @@ pageType: home
 
                         {% for link in gaweKomik %}
                             <li class="keluku">
-                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
                                     <div class="wadah-img">
-                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
                                     </div>
                                     <div class="wadah-takarir">
                                         <p class="hulu-taka">
-                                            {{imgCap}}
+                                            {{ link.imgCap }}
                                         </p>
                                         <p>
-                                            {{imgDesc}}
+                                            {{ link.imgDesc }}
                                         </p>
                                     </div>
                                 </a>
@@ -183,16 +183,16 @@ pageType: home
 
                         {% for link in gaweIlus %}
                             <li class="keluku">
-                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
                                     <div class="wadah-img">
-                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
                                     </div>
                                     <div class="wadah-takarir">
                                         <p class="hulu-taka">
-                                            {{imgCap}}
+                                            {{ link.imgCap }}
                                         </p>
                                         <p>
-                                            {{imgDesc}}
+                                            {{ link.imgDesc }}
                                         </p>
                                     </div>
                                 </a>
@@ -252,16 +252,16 @@ pageType: home
 
                         {% for link in gaweCipbun %}
                             <li class="keluku">
-                                <a href="{{linkHref}}" title="{{linkTitle}}">
+                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
                                     <div class="wadah-img">
-                                        <img src="{{imgSrc}}" alt="{{imgAlt}}">
+                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
                                     </div>
                                     <div class="wadah-takarir">
                                         <p class="hulu-taka">
-                                            {{imgCap}}
+                                            {{ link.imgCap }}
                                         </p>
                                         <p>
-                                            {{imgDesc}}
+                                            {{ link.imgDesc }}
                                         </p>
                                     </div>
                                 </a>

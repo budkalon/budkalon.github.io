@@ -1,0 +1,22 @@
+---
+title: Blog
+layout: blogList.njk
+pageType: blogIndex
+---
+<h1>Blog</h1>
+<ul>
+{%- for post in collections.post -%}
+    <li>
+        <article>
+            <h3>{{ post.data.title }}</h3>
+            <p>
+                by <a href="{{ post.data.authorLink }}">{{ post.data.author }}</a>
+            </p>
+            <p>
+                {{ post.data.description }}
+            </p>
+        </article>
+    </li>
+{%- endfor -%}
+
+</ul>

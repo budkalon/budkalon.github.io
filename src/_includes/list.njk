@@ -1,5 +1,3 @@
-<ul id="dynamic-list">
-    {% for link in links %}
-        <li class="navan"><a href="{{ link.href }}">{{ link.text }}</a></li>
-    {% endfor %}
-</ul>
+{% macro larink(linkHref, text='') %}
+    <li class="navan"><a href="{{ linkHref }}">{{ text }}</a></li>
+{% endmacro %}
