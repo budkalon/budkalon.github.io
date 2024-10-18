@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    {% include "allHead.njk" %}
   </head>
   <body>
     {% include "header.njk" %}
 
+    <hr>
+
     <main id="awaktama">
-        {{ content | safe }}
+      <article>
+        <h2>
+          {{ title }}
+        </h2>
+        <div id="awalan">
+          <li>
+            by <a href="{{ authorLink }}">{{ author }}</a>
+          </li>
+          <li>
+            in {{ date }}
+          </li>
+          <li>
+            on 
+            <ul>
+              {%- for cat in category -%}
+              <li>
+                #{{ cat }} 
+              </li>
+              {%- endfor %}
+            </ul>
+          </li>
+        </div>
+        <p id="deskripsitama">
+          {{ description }}
+        </p>
+        <img src="" alt="">
+      
+        <div id="wadah-blog">
+          {{ content | safe }}
+        </div>
+      </article>
     </main>
+
+    <hr>
 
     {% include "footer.njk" %}
     <script src="/assets/javascript.js"></script>

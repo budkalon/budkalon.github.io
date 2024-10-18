@@ -6,9 +6,20 @@
   <body>
     {% include "header.njk" %}
 
+    <hr>
+    
     <main id="awaktama">
+      <h2 id="judultama">{{ title }}</h2>
+      <img src="{{ img }}" alt="{{ description }}">
+      <p>
+        {{ description }}
+      </p>
+      <article>
         {{ content | safe }}
+      </article>
     </main>
+
+    <hr>
 
     {% include "footer.njk" %}
     <script src="/assets/javascript.js"></script>
