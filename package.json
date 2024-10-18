@@ -1,0 +1,16 @@
+{
+  "name": "budkalon.github.io",
+  "version": "1.0.0",
+  "description": "Just trying to make a simple landing page with (maybe) a commission form page",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
