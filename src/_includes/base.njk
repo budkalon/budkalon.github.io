@@ -9,7 +9,9 @@
   <body>
     {% include "header.njk" %}
 
-    {{ content | safe }}
+    <main id="awaktama">
+        {{ content | safe }}
+    </main>
 
     {% include "footer.njk" %}
     <script src="/assets/javascript.js"></script>

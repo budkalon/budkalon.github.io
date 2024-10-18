@@ -6,9 +6,10 @@
         {%- endif -%}
     </div>
     <nav id="navigasina">
-        <ul id="larink">
-            <li class="navan"><a href="/about">About</a></li>
-            <li class="navan"><a href="/faq">FAQ</a></li>
-        </ul>
+        {% set yourLinksArray = [
+            { href: '/about', text: 'About' },
+            { href: '/faq', text: 'FAQ' }
+        ] %}
+        {% include "list.njk" links=yourLinksArray %}
     </nav>
 </header>
