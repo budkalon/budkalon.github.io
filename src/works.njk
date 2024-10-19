@@ -3,4 +3,74 @@ title: Works
 layout: works.njk
 pageType: workIndex
 ---
-<h1>Hi!</h1>
+{% from "macro/list.njk" import galeri %}
+
+<h1>{{ title }}</h1>
+<div id="wadahan">
+    <section class="wadah-gawe">
+        <h2>
+            Comics
+        </h2>
+        <div id="wadah-komik">
+            <ul>
+                {%- for wadah in collections.comic %}
+                    {%- if loop.index <= 6 -%}
+                        {{ galeri(
+                            linkHref = wadah.url,
+                            linkTitle = wadah.data.title,
+                            imgSrc = wadah.data.thumb,
+                            imgAlt = wadah.data.imgDesc,
+                            imgCap = wadah.data.title,
+                            imgDesc = wadah.data.imgDesc
+                        ) }}
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </div>
+        <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
+    </section>
+    <section class="wadah-gawe">
+        <h2>
+            Illustrations
+        </h2>
+        <div id="wadah-komik">
+            <ul>
+                {%- for wadah in collections.illus %}
+                    {%- if loop.index <= 8 -%}
+                        {{ galeri(
+                            linkHref = wadah.url,
+                            linkTitle = wadah.data.title,
+                            imgSrc = wadah.data.thumb,
+                            imgAlt = wadah.data.imgDesc,
+                            imgCap = wadah.data.title,
+                            imgDesc = wadah.data.imgDesc
+                        ) }}
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </div>
+        <p class="more-gawe"><a href="/works/illustration">more illustration works ></a></p>
+    </section>
+    <section class="wadah-gawe">
+        <h2>
+            Worldbuilding
+        </h2>
+        <div id="wadah-komik">
+            <ul>
+                {%- for wadah in collections.wb %}
+                    {%- if loop.index <= 4 -%}
+                        {{ galeri(
+                            linkHref = wadah.url,
+                            linkTitle = wadah.data.title,
+                            imgSrc = wadah.data.thumb,
+                            imgAlt = wadah.data.imgDesc,
+                            imgCap = wadah.data.title,
+                            imgDesc = wadah.data.imgDesc
+                        ) }}
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </div>
+        <p class="more-gawe"><a href="/works/worldbuilding">more worldbuilding works ></a></p>
+    </section>
+</div>

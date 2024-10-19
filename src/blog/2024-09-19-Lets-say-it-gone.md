@@ -16,6 +16,9 @@ list:
     banda: punda
   - nama: biji
     banda: semangka
+featuredImg: img.jpg
 ---
-### boko
-jahahha
+> Siapa pula orang yang bisa memakan serangga hingga pagi buta? Juragan Arma ialah orangnya. Berkelana hingga ke hutan rimba hanya demi melahap sebatang serangga.
+
+Dulu orang pernah melihatnya...
+

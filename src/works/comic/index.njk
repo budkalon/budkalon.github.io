@@ -1,22 +1,57 @@
 ---
+title: Comic Works
 layout: base.njk
+pagination:
+  data: collections.comic
+  size: 2
+  alias: posts
+  reverse: true
+permalink: /works/comic/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
-<ul>
-    {%- for post in collections.comic -%}
-        <li>
-            <article>
-                <a href="{{ post.url }}" title="{{ post.data.title }}">
-                    <h3>{{ post.data.title }}</h3>
-                </a>
-                
-                <p>
-                    by <a href="{{ post.data.authorLink }}">{{ post.data.author }}</a>
-                </p>
-                <p>
-                    {{ post.data.description }}
-                </p>
-            </article>
-        </li>
-    {%- endfor -%}
-    
+<div id="awak">
+    <nav id="breadcrum">
+        <span class="folderan">
+            <a href="/">Home</a>
+        </span>
+        /
+        <span class="folderan">
+            <a href="/works">Works</a>
+        </span>
+    </nav>
+
+    <ul>
+        {%- for post in posts -%}
+            <li>
+                <article>
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <h3>{{ post.data.title }}</h3>
+                    </a>
+                    
+                    <p>
+                        by <a href="{{ post.data.authorLink }}">{{ post.data.author }}</a>
+                    </p>
+                    <p>
+                        {{ post.data.description }}
+                    </p>
+                </article>
+            </li>
+        {%- endfor -%}
     </ul>
+</div>   
+ 
+{% if pagination.href.previous or pagination.href.next %}
+    <div id="lalaman">
+        {% if pagination.href.previous %}
+            <a href=" {{ pagination.href.previous }}">Previous</a>
+        {% endif %} 
+        
+        {% if pagination.href.previous and pagination.href.next %}
+            / 
+        {% endif %} 
+        
+        {% if pagination.href.next %}
+            <a href=" {{ pagination.href.next }}">Next</a>
+        {% endif %}
+    </div>
+{% endif %} 
+

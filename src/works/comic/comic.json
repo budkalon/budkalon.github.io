@@ -1,5 +1,6 @@
 {
     "author": "budkalon",
     "authorLink": "https://budkalon.crd.co",
-    "layout": "comics.njk"
+    "layout": "comics.njk",
+    "pageType": "comic"
 }

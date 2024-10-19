@@ -6,7 +6,6 @@ pageType: home
 {% from "macro/list.njk" import larink %}
 {% from "macro/list.njk" import galeri %}
 
-<section id="awaktama">
     <section id="beungeut">
         <div id="calawakan" class="kokolom">
             <div class="kolom kiri">
@@ -72,59 +71,18 @@ pageType: home
                 <p>Several comics I made between 2018--present. I keep the language as it is since the language I used for the comic is the one that I intended on the planning.</p>
                 <div id="galeri-komik" class="galeri">
                     <ul class="galeri sama sizeA4 port">
-                        {% set gaweKomik = [
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: 'yeyo',
-                                imgDesc: 'hooo'
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: 'awuuuuu',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            }
-                        ] %}
-
-                        {% for gambar in gaweKomik %}
-                            {{ galeri(
-                                linkHref = gambar.href,
-                                linkTitle = gambar.linkTitle,
-                                imgSrc = gambar.imgSrc,
-                                imgAlt = gambar.imgAlt,
-                                imgCap = gambar.imgCap,
-                                imgDesc = gambar.imgDesc
-                            ) }}
-                        {% endfor %}
+                        {%- for wadah in collections.comic %}
+                            {%- if loop.index <= 4 -%}
+                                {{ galeri(
+                                    linkHref = wadah.url,
+                                    linkTitle = wadah.data.title,
+                                    imgSrc = wadah.data.thumb,
+                                    imgAlt = wadah.data.imgDesc,
+                                    imgCap = wadah.data.title,
+                                    imgDesc = wadah.data.imgDesc
+                                ) }}
+                            {%- endif -%}
+                        {%- endfor -%}
                     </ul>
                 </div>
                 <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
@@ -134,60 +92,18 @@ pageType: home
                 <p>I have several kind of rendering styles.</p>
                 <div id="galeri-gambar" class="galeri">
                     <ul class="galeri">
-                        {% set gaweIlus = [
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            }
-                        ] %}
-
-                        {% for gambar in gaweIlus %}
-                            {{ galeri(
-                                linkHref = gambar.href,
-                                linkTitle = gambar.linkTitle,
-                                imgSrc = gambar.imgSrc,
-                                imgAlt = gambar.imgAlt,
-                                imgCap = gambar.imgCap,
-                                imgDesc = gambar.imgDesc
-                            ) }}
-                            </li>
-                        {% endfor %}
+                        {%- for wadah in collections.illus %}
+                            {%- if loop.index <= 4 -%}
+                                {{ galeri(
+                                    linkHref = wadah.url,
+                                    linkTitle = wadah.data.title,
+                                    imgSrc = wadah.data.thumb,
+                                    imgAlt = wadah.data.imgDesc,
+                                    imgCap = wadah.data.title,
+                                    imgDesc = wadah.data.imgDesc
+                                ) }}
+                            {%- endif -%}
+                        {%- endfor -%}
                     </ul>
                 </div>
                 <p class="more-gawe"><a href="/works/illustration">more illustration works ></a></p>
@@ -197,63 +113,21 @@ pageType: home
                 <p>My main hobby is actually doing fantasy worldbuilding. My main worldbuilding project is Tagalbuni, but there are also several other projects I am currently developing.</p>
                 <div id="galeri-cipbun" class="galeri">
                     <ul class="galeri size16-19">
-                        {% set gaweCipbun = [
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: '',
-                                imgDesc: ''
-                            },
-                            { 
-                                linkHref: 'mailto:budkalon.zetya+web@gmail.com', 
-                                linkTitle: 'Email' ,
-                                imgSrc: '',
-                                imgAlt: '',
-                                imgCap: 'wiwi',
-                                imgDesc: ''
-                            }
-                        ] %}
-
-                        {% for gambar in gaweCipbun %}
-                            {{ galeri(
-                                linkHref = gambar.href,
-                                linkTitle = gambar.linkTitle,
-                                imgSrc = gambar.imgSrc,
-                                imgAlt = gambar.imgAlt,
-                                imgCap = gambar.imgCap,
-                                imgDesc = gambar.imgDesc
-                            ) }}
-                        {% endfor %}
+                        {%- for wadah in collections.wb %}
+                            {%- if loop.index <= 4 -%}
+                                {{ galeri(
+                                    linkHref = wadah.url,
+                                    linkTitle = wadah.data.title,
+                                    imgSrc = wadah.data.thumb,
+                                    imgAlt = wadah.data.imgDesc,
+                                    imgCap = wadah.data.title,
+                                    imgDesc = wadah.data.imgDesc
+                                ) }}
+                            {%- endif -%}
+                        {%- endfor -%}
                     </ul>
                 </div>
                 <p class="more-gawe"><a href="/works/worldbuilding">more worldbuilding works ></a></p>
             </div>
         </div>
     </section>
-</section>

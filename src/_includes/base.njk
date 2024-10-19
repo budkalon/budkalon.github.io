@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include "allHead.njk" %}
+    {% include "parts/allHead.njk" %}
   </head>
-  <body>
-    {% include "header.njk" %}
+  <body data-pageType="{{ pageType }}">
+    {% include "parts/header.njk" %}
 
     {%- if heroImg -%}
       <hr>
-      <div id="gambar-tukang">[]</div>
+      <div id="gambar-tukang">
+        []
+      </div>
     {%- endif -%}
 
     <hr>
 
-    <main id="awaktama">
-      <h2 id="judultama">{{ title }}</h2>
-      <article>
-        {{ content | safe }}
-      </article>
-    </main>
+    {{ content | safe }}
 
     <hr>
 
-    {% include "footer.njk" %}
+    {% include "parts/footer.njk" %}
   </body>
 </html>

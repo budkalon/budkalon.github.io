@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include "allHead.njk" %}
-  </head>
-  <body>
-    {% include "header.njk" %}
-
-    <hr>
-    
+---
+layout: base.njk
+---
     <main id="awaktama">
+      {{ pageType }}
       <h2 id="judultama">{{ title }}</h2>
       <img src="{{ img }}" alt="{{ description }}">
       <p>
@@ -18,9 +12,3 @@
         {{ content | safe }}
       </article>
     </main>
-
-    <hr>
-
-    {% include "footer.njk" %}
-  </body>
-</html>

@@ -1,5 +1,5 @@
 ---
-layout: 'base.njk'
+layout: 'default.njk'
 title: About
 pageType: page
 heroImg: false

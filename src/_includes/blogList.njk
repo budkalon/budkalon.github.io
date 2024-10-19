@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include "allHead.njk" %}
-  </head>
-  <body>
-    {% include "header.njk" %}
-
-    {%- if heroImg -%}
-      <div id="gambar-tukang">[]</div>
-    {%- endif -%}
-
+---
+layout: base.njk
+---
     <main id="awaktama">
         {{ content | safe }}
     </main>
-
-    {% include "footer.njk" %}
-  </body>
-</html>
