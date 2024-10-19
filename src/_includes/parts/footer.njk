@@ -3,30 +3,35 @@
 <footer id="sukutama">
     <div class="kokolom">
         <div class="kolom kiri">
-            Budkalon's Personal Website
+            Budkalon's Personal Website <br>
             Copyright&copy;{{ tahunIni }}, Budkalon Zetya. All rights reserved.
         </div>
         <div class="kolom kanan">
             {% set socmed = [
                 { 
                     href: 'mailto:budkalon.zetya+web@gmail.com', 
-                    text: 'Email' 
+                    text: 'Email',
+                    target: '_blank'
                 },
                 { 
                     href: 'https://fb.com/budkalon', 
-                    text: 'Facebook' 
+                    text: 'Facebook',
+                    target: '_blank'
                 },
                 { 
                     href: 'https://x.com/budkalon', 
-                    text: 'Xwitter' 
+                    text: 'Xwitter',
+                    target: '_blank' 
                 },
                 { 
                     href: 'https://bsky.app/profile/budkalon.bsky.social', 
-                    text: 'Bluesky' 
+                    text: 'Bluesky',
+                    target: '_blank' 
                 },
                 { 
                     href: 'https://youtube.com/@budkalon', 
-                    text: 'YouTube' 
+                    text: 'YouTube',
+                    target: '_blank' 
                 }
             ] %}
             
@@ -34,7 +39,8 @@
                 {% for link in socmed %}
                     {{ larink(
                         linkHref = link.href,
-                        text = link.text
+                        text = link.text,
+                        target = link.target
                     ) }}
                 {% endfor %}
             </ul>

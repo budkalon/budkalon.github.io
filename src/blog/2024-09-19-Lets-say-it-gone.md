@@ -8,6 +8,7 @@ labels:
   - hutan
   - kikil
 description: guriham
+date: 2024-09-19
 list:
   - nama: susana
     banda: neira

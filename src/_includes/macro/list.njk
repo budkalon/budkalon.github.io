@@ -1,5 +1,5 @@
-{% macro larink(linkHref, text='link') %}
-    <li class="navan"><a title="{{ text }}" href="{{ linkHref }}">{{ text }}</a></li>
+{% macro larink(linkHref, text='link', target='_self') %}
+    <li class="navan"><a target="{{ target }}" title="{{ text }}" href="{{ linkHref }}">{{ text }}</a></li>
 {% endmacro %}
 
 <!--GALERI-->
@@ -25,7 +25,7 @@
 {% macro artikel(linkHref, title, category, date, imgSrc, imgAlt, author, authorLink, desc, isCat = true) %}
 <article>
     {%- if (isCat) -%}
-    <a href="/blog/category/{{ category }}">{{ category }}</a> >
+        <a href="/blog/category/{{ category }}">{{ category }}</a> >
     {%- else -%}
     {%- endif -%}
     <h3>
