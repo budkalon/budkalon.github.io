@@ -2,16 +2,20 @@
 title: Blog
 layout: blogList.njk
 pageType: blogIndex
+heroImg: true
 ---
 <h1>Blog</h1>
-<ul>
-{%- for post in collections.post -%}
-    <li>
+<div id="wadah-artikel">
+    {%- for post in collections.post -%}
         <article>
-            <a href="{{ post.url }}" title="{{ post.data.title }}">
-                <h3>{{ post.data.title }}</h3>
-            </a>
+            <h3>
+                {{ post.data.category }} >
+                <a href="{{ post.url }}" title="{{ post.data.title }}">
+                    {{ post.data.title }}
+                </a>
+            </h3>
             
+            {{ post.date | postDate }}
             <p>
                 by <a href="{{ post.data.authorLink }}">{{ post.data.author }}</a>
             </p>
@@ -19,7 +23,6 @@ pageType: blogIndex
                 {{ post.data.description }}
             </p>
         </article>
-    </li>
-{%- endfor -%}
-
-</ul>
+        <hr>
+    {%- endfor -%}
+</div>

@@ -2,6 +2,7 @@
 layout: 'base.njk'
 title: F.A.Q
 pageType: page
+heroImg: false
 ---
 hello, just reading
 

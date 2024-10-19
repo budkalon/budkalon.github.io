@@ -6,11 +6,14 @@
   <body>
     {% include "header.njk" %}
 
+    {%- if heroImg -%}
+      <div id="gambar-tukang">[]</div>
+    {%- endif -%}
+
     <main id="awaktama">
         {{ content | safe }}
     </main>
 
     {% include "footer.njk" %}
-    <script src="/assets/javascript.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+{% from "macro/list.njk" import larink %}
+
 <footer id="sukutama">
     <div class="kokolom">
         <div class="kolom kiri">
@@ -30,9 +32,14 @@
             
             <ul class="larink small">
                 {% for link in socmed %}
-                    <li class="navan"><a target="_blank" href="{{ link.href }}">{{ link.text }}</a></li>
+                    {{ larink(
+                        linkHref = link.href,
+                        text = link.text
+                    ) }}
                 {% endfor %}
             </ul>
         </div>
     </div>
 </footer>
+
+<script src="/assets/javascript.js"></script>

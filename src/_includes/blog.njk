@@ -10,6 +10,14 @@
 
     <main id="awaktama">
       <article>
+        <p>
+          [hah]
+          
+        {%- for nak in list -%}
+          {{ nak.nama }} dan {{ nak.banda }} <br>
+        {%- endfor %}
+        </p>
+        Blog / {{ category }} /
         <h2>
           {{ title }}
         </h2>
@@ -23,7 +31,7 @@
           <li>
             on 
             <ul>
-              {%- for cat in category -%}
+              {%- for cat in labels -%}
               <li>
                 #{{ cat }} 
               </li>
@@ -45,6 +53,5 @@
     <hr>
 
     {% include "footer.njk" %}
-    <script src="/assets/javascript.js"></script>
   </body>
 </html>

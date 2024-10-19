@@ -3,6 +3,9 @@ layout: 'home.njk'
 title: Budkalon's Site
 pageType: home
 ---
+{% from "macro/list.njk" import larink %}
+{% from "macro/list.njk" import galeri %}
+
 <section id="awaktama">
     <section id="beungeut">
         <div id="calawakan" class="kokolom">
@@ -48,7 +51,7 @@ pageType: home
                 </div>
             </div>
             <div class="kolom kanan kosong">
-                [all in one]
+                []
             </div>
         </div>
     </section>
@@ -83,7 +86,7 @@ pageType: home
                                 linkTitle: 'Email' ,
                                 imgSrc: '',
                                 imgAlt: '',
-                                imgCap: '',
+                                imgCap: 'awuuuuu',
                                 imgDesc: ''
                             },
                             { 
@@ -112,22 +115,15 @@ pageType: home
                             }
                         ] %}
 
-                        {% for link in gaweKomik %}
-                            <li class="keluku">
-                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
-                                    <div class="wadah-img">
-                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
-                                    </div>
-                                    <div class="wadah-takarir">
-                                        <p class="hulu-taka">
-                                            {{ link.imgCap }}
-                                        </p>
-                                        <p>
-                                            {{ link.imgDesc }}
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
+                        {% for gambar in gaweKomik %}
+                            {{ galeri(
+                                linkHref = gambar.href,
+                                linkTitle = gambar.linkTitle,
+                                imgSrc = gambar.imgSrc,
+                                imgAlt = gambar.imgAlt,
+                                imgCap = gambar.imgCap,
+                                imgDesc = gambar.imgDesc
+                            ) }}
                         {% endfor %}
                     </ul>
                 </div>
@@ -181,21 +177,15 @@ pageType: home
                             }
                         ] %}
 
-                        {% for link in gaweIlus %}
-                            <li class="keluku">
-                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
-                                    <div class="wadah-img">
-                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
-                                    </div>
-                                    <div class="wadah-takarir">
-                                        <p class="hulu-taka">
-                                            {{ link.imgCap }}
-                                        </p>
-                                        <p>
-                                            {{ link.imgDesc }}
-                                        </p>
-                                    </div>
-                                </a>
+                        {% for gambar in gaweIlus %}
+                            {{ galeri(
+                                linkHref = gambar.href,
+                                linkTitle = gambar.linkTitle,
+                                imgSrc = gambar.imgSrc,
+                                imgAlt = gambar.imgAlt,
+                                imgCap = gambar.imgCap,
+                                imgDesc = gambar.imgDesc
+                            ) }}
                             </li>
                         {% endfor %}
                     </ul>
@@ -245,27 +235,20 @@ pageType: home
                                 linkTitle: 'Email' ,
                                 imgSrc: '',
                                 imgAlt: '',
-                                imgCap: '',
+                                imgCap: 'wiwi',
                                 imgDesc: ''
                             }
                         ] %}
 
-                        {% for link in gaweCipbun %}
-                            <li class="keluku">
-                                <a href="{{ link.linkHref }}" title="{{ link.linkTitle }}">
-                                    <div class="wadah-img">
-                                        <img src="{{ link.imgSrc }}" alt="{{ ilink.mgAlt }}">
-                                    </div>
-                                    <div class="wadah-takarir">
-                                        <p class="hulu-taka">
-                                            {{ link.imgCap }}
-                                        </p>
-                                        <p>
-                                            {{ link.imgDesc }}
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
+                        {% for gambar in gaweCipbun %}
+                            {{ galeri(
+                                linkHref = gambar.href,
+                                linkTitle = gambar.linkTitle,
+                                imgSrc = gambar.imgSrc,
+                                imgAlt = gambar.imgAlt,
+                                imgCap = gambar.imgCap,
+                                imgDesc = gambar.imgDesc
+                            ) }}
                         {% endfor %}
                     </ul>
                 </div>

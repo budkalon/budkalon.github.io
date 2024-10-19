@@ -6,6 +6,11 @@
   <body>
     {% include "header.njk" %}
 
+    {%- if heroImg -%}
+      <hr>
+      <div id="gambar-tukang">[]</div>
+    {%- endif -%}
+
     <hr>
 
     <main id="awaktama">
@@ -18,6 +23,5 @@
     <hr>
 
     {% include "footer.njk" %}
-    <script src="/assets/javascript.js"></script>
   </body>
 </html>
