@@ -3,6 +3,7 @@ layout: 'default.njk'
 title: F.A.Q
 pageType: page
 heroImg: false
+permalink: /faq.html
 ---
 hello, just reading
 

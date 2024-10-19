@@ -3,14 +3,7 @@ layout: base.njk
 ---
 <main id="awaktama">
   <article>
-    <p>
-      [hah]
-      
-    {%- for nak in list -%}
-      {{ nak.nama }} dan {{ nak.banda }} <br>
-    {%- endfor %}
-    </p>
-    Blog / {{ category }} /
+    <a href="/blog">Blog</a> / <a href="/blog/category/{{ categories }}">{{ categories }}</a> /
     <h2>
       {{ title }}
     </h2>
@@ -25,9 +18,9 @@ layout: base.njk
         on 
         <ul>
           {%- for cat in labels -%}
-          <li>
-            #{{ cat }} 
-          </li>
+            <li>
+              #{{ cat }} 
+            </li>
           {%- endfor %}
         </ul>
       </li>

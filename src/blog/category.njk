@@ -1,0 +1,35 @@
+---
+layout: blogList.njk
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: /blog/category/{{ category | slugify }}/index.html
+pageType: catIndex
+title: Category
+---
+{% from "macro/list.njk" import artikel %}
+
+<a href="/blog">Blog</a> /
+<h1>
+  Category: {{ category }}
+</h1>
+{% for post in collections.post | reverse %}
+  {% if post.data.categories == category %}
+    {{ artikel(
+      linkHref = post.url, 
+      title = post.data.title, 
+      date = post.date, 
+      imgSrc = post.data.thumb, 
+      category = post.data.categories, 
+      imgAlt = post.data.thumbAlt, 
+      author = post.data.author, 
+      authorLink = post.data.authorLink, 
+      desc = post.data.description,
+      isCat = false
+    ) }}
+  {% endif %}
+{% endfor %}
+
+
+

@@ -3,8 +3,7 @@ title: Hello World
 layout: blog.njk
 tags:
   - post
-category:
-  - guran
+categories: ["guran"]
 labels:
   - pipil
   - akil

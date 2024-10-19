@@ -10,25 +10,22 @@ pagination:
   reverse: true
 permalink: /blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
+{% from "macro/list.njk" import artikel %}
+
 <h1>Blog</h1>
 <div id="wadah-artikel">
     {%- for post in posts -%}
-        <article>
-            {{ post.data.category }} >
-            <h3>
-                <a href="{{ post.url }}" title="{{ post.data.title }}">
-                    {{ post.data.title }}
-                </a>
-            </h3>
-            
-            {{ post.date | postDate }}
-            <p>
-                by <a href="{{ post.data.authorLink }}">{{ post.data.author }}</a>
-            </p>
-            <p>
-                {{ post.data.description }}
-            </p>
-        </article>
+        {{ artikel(
+            linkHref = post.url, 
+            title = post.data.title, 
+            category = post.data.categories, 
+            date = post.date, 
+            imgSrc = post.data.thumb, 
+            imgAlt = post.data.thumbAlt, 
+            author = post.data.author, 
+            authorLink = post.data.authorLink, 
+            desc = post.data.description
+        ) }}
     {%- endfor -%}
     <hr>
 </div>

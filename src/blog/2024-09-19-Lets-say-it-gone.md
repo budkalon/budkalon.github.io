@@ -3,8 +3,7 @@ title: Let's say it's gone
 layout: blog.njk
 tags:
   - post
-category:
-  - halam
+categories: ["halam"]
 labels:
   - hutan
   - kikil
