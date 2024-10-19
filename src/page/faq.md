@@ -1,11 +1,9 @@
 ---
-layout: 'default.njk'
 title: F.A.Q
-pageType: page
 heroImg: false
 permalink: /faq.html
 ---
-hello, just reading
+hello, just eating
 
 1. is it okay?
 

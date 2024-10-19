@@ -1,7 +1,7 @@
 ---
 tags: 
 title: 
-layout: blog.njk
+layout: layouts/blog.njk
 pageType: blog
 date: ""
 category: 

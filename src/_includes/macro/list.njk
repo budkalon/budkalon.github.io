@@ -22,8 +22,8 @@
 {% endmacro %}
 
 <!--ARTIKEL-->
-{% macro artikel(linkHref, title, category, date, imgSrc, imgAlt, author, authorLink, desc, isCat = true) %}
-<article>
+{% macro artikel(linkHref, title, category, date, imgSrc, imgAlt, author, authorLink, desc, isCat = true, coll = 'multiple') %}
+<article class="{{ coll }}">
     {%- if (isCat) -%}
         <a href="/blog/category/{{ category }}">{{ category }}</a> >
     {%- else -%}

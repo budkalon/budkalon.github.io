@@ -1,6 +1,5 @@
 ---
 title: Let's say it's gone
-layout: blog.njk
 tags:
   - post
 categories: ["halam"]
@@ -18,6 +17,7 @@ list:
     banda: semangka
 featuredImg: img.jpg
 ---
+### {{ title }}
 > Siapa pula orang yang bisa memakan serangga hingga pagi buta? Juragan Arma ialah orangnya. Berkelana hingga ke hutan rimba hanya demi melahap sebatang serangga.
 
 Dulu orang pernah melihatnya...

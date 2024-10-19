@@ -1,6 +1,5 @@
 ---
 title: Hello World
-layout: blog.njk
 tags:
   - post
 categories: ["guran"]

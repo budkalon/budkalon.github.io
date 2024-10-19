@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+<div id="wadah-intro">
+    <h1>
+        {{ title }}
+    </h1>
+    <div id="wadah-deskripsi">
+        <p id="deskripsinya">
+            Ini adalah kumpulan tumpah ruah catatan pribadi diri sendiri.
+        </p>
+        <div id="senarai-kategori">
+            <ul class="totombol vertikal">
+                {% for category in collections.categories %}
+                    <li class="tombolan"><a title="{{ category }}" href="/blog/category/{{ category }}">{{ category }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="wadah-senarai">
+    {{ content | safe }}
+</div>

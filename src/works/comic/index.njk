@@ -1,12 +1,12 @@
 ---
 title: Comic Works
-layout: base.njk
+layout: layouts/base.njk
 pagination:
   data: collections.comic
   size: 2
   alias: posts
   reverse: true
-permalink: /works/comic/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+permalink: /works/comic/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 <div id="awak">
     <nav id="breadcrum">
