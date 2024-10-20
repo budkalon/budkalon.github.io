@@ -7,8 +7,13 @@ layout: layouts/base.njk
     </h1>
     <div id="wadah-deskripsi">
         <p id="deskripsinya">
-            Ini adalah kumpulan tumpah ruah catatan pribadi diri sendiri.
+            {%- if "/blog/category" in page.url -%}
+                Ini adalah kategori
+            {%- elif "/blog" in page.url -%}
+                Ini adalah kumpulan tumpah ruah catatan pribadi diri sendiri.
+            {%- endif -%}
         </p>
+        
         <div id="senarai-kategori">
             <ul class="totombol vertikal">
                 {% for category in collections.categories %}

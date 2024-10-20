@@ -1,5 +1,5 @@
 ---
-layout: layouts/blogList.njk
+layout: layouts/base.njk
 pagination:
   data: collections.categories
   size: 1
@@ -10,11 +10,31 @@ title: Category
 ---
 {% from "macro/list.njk" import artikel %}
 
-<a href="/blog">Blog</a> /
-<h1>
-  Category: {{ category }}
-</h1>
-{% for post in collections.post | reverse %}
+<div id="wadah-intro">
+  <nav id="breadcrumb">
+    <a href="/blog">Blog</a> /
+  </nav>
+  <h1>
+    {{ category }}
+  </h1>
+  <div id="wadah-deskripsi">
+      <p id="deskripsinya">
+        Category of "{{ category }}"
+      </p>
+      
+      <div id="senarai-kategori">
+          <ul class="totombol vertikal">
+              {% for cat in collections.categories %}
+                {% if cat != category %}
+                    <li class="tombolan"><a title="{{ cat }}" href="/blog/category/{{ cat }}">{{ cat }}</a></li>
+                {% endif %}
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</div>
+<div id="wadah-senarai">
+  {% for post in collections.post | reverse %}
   {% if post.data.categories == category %}
     {{ artikel(
       linkHref = post.url, 
@@ -30,6 +50,10 @@ title: Category
     ) }}
   {% endif %}
 {% endfor %}
+</div>
+
+
+
 
 
 

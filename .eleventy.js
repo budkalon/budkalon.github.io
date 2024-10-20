@@ -6,10 +6,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("tahunIni", () => `${new Date().getFullYear()}`);
 
-    eleventyConfig.addFilter("postDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).
-        toLocaleString(DateTime.DATE_FULL);
-    })
+    eleventyConfig.addFilter("postDate", dateObj => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
+      })
 
     eleventyConfig.addFilter("getByURL", function(url, posts) {
         return posts.reduce((prev, p) => {
@@ -22,6 +21,7 @@ module.exports = function (eleventyConfig) {
         return relatedPosts.map(p => eleventyConfig.getFilter('getByURL')(p, posts));
     });
 
+    // KATEGORI BLOG
     eleventyConfig.addCollection("categories", function(collectionApi) {
 		let categories = new Set();
 		let posts = collectionApi.getFilteredByTag('post');
@@ -42,10 +42,38 @@ module.exports = function (eleventyConfig) {
 		return result;
 	});
 
+    // GENRE KOMIK
+    eleventyConfig.addCollection("comgenre", function(collectionApi) {
+        let genres = new Set();  // Use a Set to store unique genres
+        let comics = collectionApi.getFilteredByTag('comic');  // Get all items tagged with 'comic'
+        
+        comics.forEach(comic => {
+            let genresList = comic.data.genre;  // Assume 'genre' is an array in front matter of 'comic'
+            
+            if (Array.isArray(genresList)) {
+                genresList.forEach(genre => genres.add(genre));  // Add each genre to the Set
+            }
+        });
+        
+        return Array.from(genres);  // Convert the Set to an Array and return it
+    });
+
+	eleventyConfig.addFilter("filterByGenre", function(comics, genre) {
+        genre = genre.toLowerCase();  // Ensure case-insensitive matching
+        let result = comics.filter(comic => {
+            let comicGenres = comic.data.genre.map(g => g.toLowerCase());  // Make all genres lowercase
+            return comicGenres.includes(genre);  // Check if the comic has the specified genre
+        });
+    
+        return result;  // Return the filtered comics list
+    });
+
     return {
         dir: {
             input: "src",
             output: "docs",
+            data: "_data",
+            include: "_includes"
         },
     };
 };

@@ -1,0 +1,47 @@
+{
+    "headContent": {
+        "siteTitle": "Budkalon's Personal Website",
+        "siteLink": "https://budkalon.crd.co",
+        "siteDesc": "deskripsi",
+        "siteKey": "key, key, key",
+        "siteImg": "img.jpg",
+        "siteIcon": "icon.jpg"
+
+    },
+    "author": {
+        "name": "Budkalon",
+        "ipa": "ˌbudkaˈloːn",
+        "link": "https://budkalon.crd.co",
+        "commission": {
+            "link": "https://vgen.co/budkalon",
+            "title": "Vgen"
+        },
+        "socmed": [
+            { 
+                "href": "mailto:budkalon.zetya+web@gmail.com", 
+                "text": "Email",
+                "target": "_blank" 
+            },
+            { 
+                "href": "https://fb.com/budkalon", 
+                "text": "Facebook",
+                "target": "_blank"  
+            },
+            { 
+                "href": "https://x.com/budkalon", 
+                "text": "Xwitter",
+                "target": "_blank"  
+            },
+            { 
+                "href": "https://bsky.app/profile/budkalon.bsky.social", 
+                "text": "Bluesky",
+                "target": "_blank"  
+            },
+            { 
+                "href": "https://youtube.com/@budkalon", 
+                "text": "YouTube",
+                "target": "_blank"  
+            }
+        ]
+    }
+}

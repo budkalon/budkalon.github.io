@@ -16,6 +16,7 @@ chapter:
   - title: The Ghost
     pages: 40
     published: 2024-10-09
+    link: /
   - title: The Killer
     pages: 40
     published: 2025-11-09

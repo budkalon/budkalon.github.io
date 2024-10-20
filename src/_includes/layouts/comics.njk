@@ -1,14 +1,114 @@
 ---
 layout: layouts/base.njk
 ---
-    <main id="awaktama">
-      {{ pageType }}
-      <h2 id="judultama">{{ title }}</h2>
-      <img src="{{ img }}" alt="{{ description }}">
-      <p>
-        {{ description }}
-      </p>
-      <article>
-        {{ content | safe }}
-      </article>
-    </main>
+<article class="{{ pageCollective }}">
+  <div id="info-komik">
+    <nav id="breadcrumb">
+      <a href="/works">Works</a> / <a href="/works/comic">Comic</a> /
+    </nav>
+    <div id="tayangan-komik" class="kokolom">
+      <div class="kolom kiri">
+        <div id="keluku-komik">
+          <img src="{{ thumb }}" alt="{{ description }}">
+        </div>
+        <ul id="detail-komik">
+          <li id="jenis-komik">
+            <span class="tanda">
+              Type
+            </span>
+            <span class="isi">
+              {{ comicType }}
+            </span>
+          </li>
+          <li id="stat-komik">
+            <span class="tanda">
+              Status
+            </span>
+            <span class="isi">
+              {{ status }}
+            </span>
+          </li>
+          <li id="rating-komik">
+            <span class="tanda">
+              Rating
+            </span>
+            <span class="isi">
+              {{ rating }}
+            </span>
+          </li>
+          <li id="genre-komik">
+            <p class="tanda">
+              Genre
+            </p>
+            <ul class="list-kotak">
+              {%- for gen in genre -%}
+                <li>
+                  {{ gen }} 
+                </li>
+              {%- endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="kolom kanan">
+        <h1  id="judultama">
+          {{ title }}
+        </h1>
+        <div id="author-komik">
+          <span class="tanda">
+            by
+          </span>
+          <span class="isi">
+            <a href="{{ authorLink }}">{{ author }}</a>
+          </span>
+        </div>
+        <div id="deskripsi-komik">
+          <p id="sinopsis-komik">
+            {{ description }}
+          </p>
+          <p id="info-lain">
+            {{ content | safe }}
+          </p>
+        </div>
+        {%- if comicType == 'series' -%}
+          <div id="list-bab">
+            <h2>Chapters</h2>
+            <ul>
+              {%- for ch in chapter -%}
+                <li>
+                  {%- if ch.link -%}
+                    <a title="{{ ch.title }}" href="{{ ch.link }}">
+                      {{ ch.title }}
+                    </a>
+                  {%- else -%}
+                    {{ ch.title }}
+                  {%- endif -%}
+                </li>
+              {%- endfor %}
+            </ul>
+          </div>
+        {%- endif %}
+        <div id="tautan-komik">
+          <h2>Links</h2>
+          <ul class="totombol vertikal">
+            {%- for taut in outlink -%}
+              <li class="{%- if taut.disabled -%}tombolan disabled{%- else -%} tombolan {%- endif -%}">
+                {%- if taut.disabled -%}
+                  {{ taut.name }}
+                {%- else -%}
+                  <a target="{{ taut.target }}" title="{{ taut.name }}" href="{{ taut.href }}">
+                    {{ taut.name }}
+                  </a>
+                {%- endif -%}
+                
+              </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="cuplik-komik">
+    []
+  </div>
+</article>

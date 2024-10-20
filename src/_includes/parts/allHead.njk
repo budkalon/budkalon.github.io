@@ -1,6 +1,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="dark only" />
+<meta name="description" content="{{ data.headContent.siteDesc }}" />
+<meta name="keywords" content="{{ data.headContent.siteKey }}" />
 <title>
     {{ title }} {%- if (pageType != "home") -%} &nbsp;| Budkalon{%- else -%}{%- endif -%}
 </title>
+<meta property="og:site_name" content="{{ data.headContent.siteTitle }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ description | default(data.headContent.siteDesc) }}" />
+<meta property="og:image" content="{{ featuredImg | default(data.headContent.siteImg) }}" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="800" />
+<meta property="og:url" content="{{ page.url | urlize }}" />
+<meta property="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="{{ page.url | urlize }}" />
+<link href="{{ data.headContent.siteIcon }}" rel="icon" type="image/x-icon">
+<link href='//blogger.googleusercontent.com' rel='dns-prefetch'/>
 <link rel="stylesheet" href="/assets/style.css">
