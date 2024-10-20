@@ -7,7 +7,7 @@ genre:
   - Horror
   - Slice of Life
 date: last modified
-thumb: img.jpg
+thumb: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhabX2hyphenhyphenhbSQ6XkOs16uxbOrAKKwc4H11h6cjYIZZYlP_tluVCmFMgpOOHZdyDtDahsurheyy6PR78JvGR6btwoTruMG3bTW9uHBMF-K5vLE_z-2Kxdls4HcQqQUyuM652le5pepDLvFVhRw0glnIgi0cfUkhs1jJ8KZeWR63pzY-IMhecAPPTEy525O2-r/s800/SELAMAT%20TIDUR%20MALAM_001.jpg
 description: Selamat malam
 comicType: oneshot
 status: finished

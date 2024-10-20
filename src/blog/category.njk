@@ -19,9 +19,11 @@ title: Category
   </h1>
   <div id="wadah-deskripsi">
       <p id="deskripsinya">
-        Category of "{{ category }}"
+        This is category of "{{ category }}"
       </p>
-      
+      <p>
+        You can see other post from these two: 
+      </p>
       <div id="senarai-kategori">
           <ul class="totombol vertikal">
               {% for cat in collections.categories %}
@@ -33,7 +35,7 @@ title: Category
       </div>
   </div>
 </div>
-<div id="wadah-senarai">
+<div id="wadah-senarai" class="cat-list">
   {% for post in collections.post | reverse %}
   {% if post.data.categories == category %}
     {{ artikel(
@@ -46,7 +48,8 @@ title: Category
       author = post.data.author, 
       authorLink = post.data.authorLink, 
       desc = post.data.description,
-      isCat = false
+      isCat = false,
+      thumb = post.data.thumb
     ) }}
   {% endif %}
 {% endfor %}

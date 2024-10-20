@@ -1,11 +1,13 @@
 ---
-tags: 
-title: 
-layout: layouts/blog.njk
-pageType: blog
-date: ""
-category: 
-author: Budkalon
-authorLink: https://budkalon.carrd.co
-description: lalalalalalal lalalalala lalasjoijgwbg
+title: title
+tags:
+  - post
+categories: ["cat"]
+labels:
+  - lab1
+  - lab2
+date: Created
+thumb: img.jpg
+description: description
+eleventyExcludeFromCollections: true
 ---

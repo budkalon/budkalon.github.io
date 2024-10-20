@@ -22,28 +22,52 @@
 {% endmacro %}
 
 <!--ARTIKEL-->
-{% macro artikel(linkHref, title, category, date, imgSrc, imgAlt, author, authorLink, desc, isCat = true, coll = 'multiple') %}
+{% macro artikel(linkHref, title, category, date, imgSrc, imgAlt, author, authorLink, desc, isCat = true, coll = 'multiple', thumb) %}
+<article class="kokolom {{ coll }}">
+    <div class="kolom kiri">
+        <img src="{{ thumb }}" alt="">
+    </div>
+    <div class="kolom-kanan">
+        {%- if (isCat) -%}
+            <a href="/blog/category/{{ category }}">{{ category }}</a> >
+        {%- else -%}
+        {%- endif -%}
+        <h3>
+            <a href="{{ linkHref }}" title="{{ title }}">
+                {{ title }}
+            </a>
+        </h3>
+        <ul>
+            <li>
+                on {{ date | postDate }}
+            </li>
+            <li>
+                by <a href="{{ authorLink }}">{{ author }}</a>
+            </li>
+        </ul>
+        <p>
+            {{ desc }}
+        </p>
+    </div>
+</article>
+{% endmacro %}
+
+<!--ILUSTRASI-->
+{% macro illusgal(linkHref, title, imgSrc, desc, coll = 'multiple') %}
 <article class="{{ coll }}">
-    {%- if (isCat) -%}
-        <a href="/blog/category/{{ category }}">{{ category }}</a> >
-    {%- else -%}
-    {%- endif -%}
-    <h3>
-        <a href="{{ linkHref }}" title="{{ title }}">
-            {{ title }}
-        </a>
-    </h3>
-    <ul>
-        <li>
-            on {{ date | postDate }}
-        </li>
-        <li>
-            by <a href="{{ authorLink }}">{{ author }}</a>
-        </li>
-    </ul>
-    <p>
-        {{ desc }}
-    </p>
+    <div class="wadah-ilus">
+        <img src="{{ imgSrc }}" alt="{{ desc }}">
+    </div>
+    <div class="info-ilus">
+        <h3>
+            <a href="{{ linkHref }}" title="{{ title }}">
+                {{ title }}
+            </a>
+        </h3>
+        <p>
+            {{ desc }}
+        </p>
+    </div>
 </article>
 {% endmacro %}
 

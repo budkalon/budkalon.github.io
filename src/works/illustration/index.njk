@@ -1,0 +1,36 @@
+---
+title: Illustration Works
+layout: layouts/base.njk
+---
+{% from "macro/list.njk" import illusgal %}
+
+<section id="wadah-intro">
+    <nav id="breadcrum">
+        <span class="folderan">
+            <a href="/">Home</a>
+        </span>
+        /
+        <span class="folderan">
+            <a href="/works">Works</a>
+        </span>
+    </nav>
+    <h1>
+        Illustrations
+    </h1>
+    <div id="wadah-deskripsi">
+        <p id="deskripsinya">
+            These are my illustrations hehe
+        </p>
+    </div>
+</section>
+<section id="wadah-senarai">
+    {%- for post in collections.illus -%}
+        {{ illusgal(
+            linkHref = post.url, 
+            title = post.data.title, 
+            imgSrc = post.data.thumb, 
+            desc = post.data.description
+        ) }}
+    {%- endfor -%}
+    <hr>
+</div>
