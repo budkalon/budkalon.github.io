@@ -1,11 +1,22 @@
 <header id="hulutama">
     <div id="judulna">
         {%- if (pageType != "home") -%}
-            <a href="/">Budkalon</a>
-        {%- else -%}
+            <a href="/">
+        {%- endif -%}
+            <div id="logona">
+                <img src="/assets/img/favicon-48x48.png" alt="">
+            </div>
+            {%- if (pageType != "home") -%}
+                <div id="jujudulna">
+                    Budkalon
+                </div>
+            {%- else -%}
+            {%- endif -%}
+        {%- if (pageType != "home") -%}
+            </a>
         {%- endif -%}
     </div>
-    <nav id="navigasina">
+    <nav role="navigation" id="navigasina">
         <ul id="larink">
             {%- if "/about" in page.url -%}
             {%- else -%}
@@ -17,9 +28,35 @@
                 <li class="navan"><a href="/faq">FAQ</a></li>
             {%- endif -%}
 
-            {%- if "/blog" in page.url -%}
-            {%- else -%}
+            {%- if (pageType != "blogIndex") -%}
                 <li class="navan"><a href="/blog">Blog</a></li>
+            {%- endif -%}
+
+            {%- if (pageType != "workIndex") and (pageType != "home")  -%}
+                <li class="navan">
+                    <a href="/works">Works</a>
+                    <ul>
+                        {%- if (pageType != "workComic")  -%}
+                            <li>
+                                <a href="/works/comic">Comic</a>
+                            </li>
+                        {%- endif -%}
+                        {%- if (pageType != "workIllus")  -%}
+                            <li>
+                                <a href="/works/illustration">Illustrations</a>
+                            </li>
+                        {%- endif -%}
+                        {%- if (pageType != "workWb")  -%}
+                            <li>
+                                <a href="/works/worldbuilding">Worldbuilding</a>
+                            </li>
+                        {%- endif -%}
+                    </ul>
+                </li>
+            {%- endif -%}
+
+            {%- if (pageType != "home") -%}
+                <li class="navan cta"><a target="_blank" href="https://vgen.co/budkalon">Commission Me</a></li>
             {%- endif -%}
             
         </ul>

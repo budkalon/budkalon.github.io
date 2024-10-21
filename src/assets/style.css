@@ -1,6 +1,19 @@
 :root {
-  --blk: black;
-  --wht: white;
+  --drk1: #080B11;
+  --drk2: #121B2A;
+  --drk3: #1C2C44;
+  --drk4: #263C5D;
+  --lgh1: #C2CFD0;
+  --lgh2: #DCE7E3;
+  --lgy1: #D6CFC0;
+  --lgy2: #F3E7D0;
+  --thm1: #E7A6A7;
+  --thm2: #EDB4B3;
+  --thm3: #F8CFCB;
+  --acn1: #B12535;
+  --fhead: "Fira Sans", sans-serif;
+  --fsubhead: "PT Serif", serif;
+  --fbody: "Open Sans", sans-serif;
 }
 /*
 * {
@@ -9,3 +22,32 @@
     margin: 0;
 }
 */
+body {
+  font-family: sans-serif;
+  line-height: 1.5em;
+  font-family: var(--fbody);
+  font-size: 11pt;
+  color: var(--lgh2);
+  background-color: var(--drk1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fhead);
+  font-weight: bold;
+  color: var(--lgy2);
+}
+h1 {
+  color: var(--thm2);
+}
+a,
+a:visited {
+  text-decoration: dotted;
+  color: var(--thm2);
+}
+a:hover {
+  color: var(--thm3);
+}

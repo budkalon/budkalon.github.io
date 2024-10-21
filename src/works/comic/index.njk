@@ -1,6 +1,7 @@
 ---
 title: Comic Works
 layout: layouts/base.njk
+pageType: workComic
 pagination:
   data: collections.comic
   size: 2
@@ -30,25 +31,36 @@ permalink: /works/comic/{% if pagination.pageNumber > 0 %}page/{{ pagination.pag
 <section id="wadah-senarai">
         {%- for post in posts -%}
                 <article class="multiple">
-                    <div id="gambar-komik">
-                        <img src="{{ post.data.thumb }}" alt="{{ post.data.description }}">
+                    <div class="gambar-komik">
+                        <div class="sampul-komik">
+                            <img src="{{ post.data.thumb }}" alt="{{ post.data.description }}">
+                        </div>
+                        <div class="preview-komik">
+                            <ul>
+                                {%- for prev in post.data.preview -%}
+                                <li>
+                                    <img src="{{ prev.img }}" alt="{{ prev.cap }}">
+                                </li>
+                                {%- endfor %}
+                            </ul>
+                        </div>
                     </div>
                     <h3>
                         <a href="{{ post.url }}" title="{{ post.data.title }}">
                         {{ post.data.title }}
                     </a>
                     </h3>  
-                    <div id="detail-komik">
-                        <span id="jenis-komik">
+                    <div class="detail-komik">
+                        <span class="jenis-komik">
                             {{ post.data.comicType }}
                         </span>
-                        <span id="stat-komik">
+                        <span class="stat-komik">
                             {{ post.data.status }}
                         </span>
-                        <span id="rating-komik">
+                        <span class="rating-komik">
                             {{ post.data.rating }}
                         </span>
-                        <span id="genre-komik">
+                        <span class="genre-komik">
                           <ul class="list-kotak">
                             {%- for gen in post.data.genre -%}
                               <li>

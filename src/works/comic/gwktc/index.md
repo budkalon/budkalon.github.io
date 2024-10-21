@@ -23,4 +23,8 @@ chapter:
   - title: The Circuit
     pages: 40
     published: 2026-05-09
+preview:
+  - img: page1.jpg
+    cap: page 1
+  - img: page2.jpg
 ---
