@@ -10,26 +10,29 @@ pageCollective: multiple
 <h1>{{ title }}</h1>
 <div id="wadahan">
     <section class="wadah-gawe">
-        <h2>
-            Comics
-        </h2>
-        <div id="wadah-komik">
-            <ul>
-                {%- for wadah in collections.comic %}
-                    {%- if loop.index <= 6 -%}
-                        {{ galeri(
-                            linkHref = wadah.url,
-                            linkTitle = wadah.data.title,
-                            imgSrc = wadah.data.thumb,
-                            imgAlt = wadah.data.imgDesc,
-                            imgCap = wadah.data.title,
-                            imgDesc = wadah.data.imgDesc
-                        ) }}
-                    {%- endif -%}
-                {%- endfor -%}
-            </ul>
+        <div id="gawe-komik" class="gawe-hareup">
+            <div class="info-gawe">
+                <h2>Comic</h2>
+                {% include "parts/gawe/comic.njk" %}
+            </div>
+            <div class="galeri-gawe galeri">
+                <ul>
+                    {%- for wadah in collections.comic %}
+                        {%- if loop.index <= 6 -%}
+                            {{ galeri(
+                                linkHref = wadah.url,
+                                linkTitle = wadah.data.title,
+                                imgSrc = wadah.data.thumb,
+                                imgAlt = wadah.data.imgDesc,
+                                imgCap = wadah.data.title,
+                                imgDesc = wadah.data.imgDesc
+                            ) }}
+                        {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+            </div>
+            <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
         </div>
-        <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
     </section>
     <section class="wadah-gawe">
         <h2>

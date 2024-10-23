@@ -1,8 +1,10 @@
 :root {
   --drk1: #080B11;
-  --drk2: #121B2A;
-  --drk3: #1C2C44;
-  --drk4: #263C5D;
+  --drk2: #0D1119;
+  --drk3: #181E29;
+  --drk4: #283242;
+  --drk4: #42526A;
+  --lgh0: #92A0AA;
   --lgh1: #C2CFD0;
   --lgh2: #DCE7E3;
   --lgy1: #D6CFC0;
@@ -15,18 +17,15 @@
   --fsubhead: "PT Serif", serif;
   --fbody: "Open Sans", sans-serif;
 }
-/*
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-*/
 body {
-  font-family: sans-serif;
-  line-height: 1.5em;
   font-family: var(--fbody);
-  font-size: 11pt;
+  font-size: 10pt;
+  line-height: 1.5;
   color: var(--lgh2);
   background-color: var(--drk1);
 }
