@@ -5,9 +5,14 @@ title: Kelopak Bintang Malam
 language: Indonesian
 genre:
   - fantasy
+  - medieval
+  - night
 date: 2023-10-19
-thumb: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmHnVXv96sU-OeaKyPD3P4V2RnvgQfKJdIk7AbQ2RC5WB6FvGMRIR4byxualUBKAeT75EOTM1K8neAygpVyZNEjoD4KK73nnOpdk1Emh15EcxufeMeQXBOqDLxiZEvzCX4jtEZhyphenhyphenTyPBOenq-jBMM-AGW0BluHii_aCYIAbgMa-ZneECdXPwpITknpH9HY/s800/Kelopak%20Bintang_000.jpg
-description: Tangkai bintang Fraum menguncup
+thumb: 
+  def: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmHnVXv96sU-OeaKyPD3P4V2RnvgQfKJdIk7AbQ2RC5WB6FvGMRIR4byxualUBKAeT75EOTM1K8neAygpVyZNEjoD4KK73nnOpdk1Emh15EcxufeMeQXBOqDLxiZEvzCX4jtEZhyphenhyphenTyPBOenq-jBMM-AGW0BluHii_aCYIAbgMa-ZneECdXPwpITknpH9HY/s800/Kelopak%20Bintang_000.jpg
+  sq: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmHnVXv96sU-OeaKyPD3P4V2RnvgQfKJdIk7AbQ2RC5WB6FvGMRIR4byxualUBKAeT75EOTM1K8neAygpVyZNEjoD4KK73nnOpdk1Emh15EcxufeMeQXBOqDLxiZEvzCX4jtEZhyphenhyphenTyPBOenq-jBMM-AGW0BluHii_aCYIAbgMa-ZneECdXPwpITknpH9HY/s600-c/Kelopak%20Bintang_000.jpg
+  wide: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmHnVXv96sU-OeaKyPD3P4V2RnvgQfKJdIk7AbQ2RC5WB6FvGMRIR4byxualUBKAeT75EOTM1K8neAygpVyZNEjoD4KK73nnOpdk1Emh15EcxufeMeQXBOqDLxiZEvzCX4jtEZhyphenhyphenTyPBOenq-jBMM-AGW0BluHii_aCYIAbgMa-ZneECdXPwpITknpH9HY/w1280-h720-p/Kelopak%20Bintang_000.jpg
+description: Bunga-tidur Fraum menguncup, membuatnya tidak bisa bermimpi. Namun, dia tidak menyerah dan memanjat sulur ajaib menuju dunia awan untuk meminta bunga-tidurnya mekar kepada sumur-permintaan.
 comicType: oneshot
 status: finished
 rating: 15+

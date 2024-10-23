@@ -6,7 +6,8 @@ labels:
   - fantasy
   - red
 date: 2022-10-09
-size: mm
+galleryIllus: false
+sizeUnit: mm
 dimension: A4
 width: 210
 height: 297

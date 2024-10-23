@@ -1,110 +1,152 @@
 ---
-layout: 'layouts/home.njk'
+layout: layouts/base.njk
 title: Budkalon's Site
 pageType: home
+heroImg: false
+pageCollective: multiple
 ---
 {% from "macro/list.njk" import larink %}
 {% from "macro/list.njk" import galeri %}
 
-    <section id="beungeut">
-        <div id="calawakan" class="kokolom">
-            <div class="kolom kiri">
-                <div id="kumenal">
-                    <h1>{{ data.author.name }}</h1>
-                    <p class="kecil">/{{ data.author.ipa }}/</p>
-                    <p>A comic artist who loves Nusantara cultures and spend too much time on doing worldbuilding, conlanging, and illustration.</p>
-                    <ul class="totombol vertikal">
-                        <li class="tombolan"><a title="my works" href="#catang">Works</a></li>
-                        <li class="tombolan"><a title="my VGen page" href="https://vgen.co/budkalon" target="_blank">Commission</a></li>
-                    </ul>
-                </div>
-                <div id="kumeklik">                    
-                    <ul class="totombol">
-                        {% for link in data.author.socmed %}
-                            <li class="tombolan"><a  title="contact me on my {{ link.text }}" target="{{ link.target }}" href="{{ link.href }}">{{ link.text }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+<section id="beungeut">
+    <div id="calawakan" class="kokolom">
+        <div class="kolom kiri">
+            <div id="kumenal">
+                <h1>{{ data.author.name }}</h1>
+                <p class="kecil">/{{ data.author.ipa }}/</p>
+                <p>A comic artist who loves Nusantara cultures and spend too much time on doing worldbuilding, conlanging, and illustration.</p>
+                <ul class="totombol vertikal">
+                    <li class="tombolan"><a title="my works" href="#catang">Works</a></li>
+                    <li class="tombolan"><a title="my VGen page" href="https://vgen.co/budkalon" target="_blank">Commission</a></li>
+                </ul>
             </div>
-            <div class="kolom kanan kosong">
-                [alla]
+            <div id="kumeklik">                    
+                <ul class="totombol">
+                    {% for link in data.author.socmed %}
+                        <li class="tombolan"><a  title="contact me on my {{ link.text }}" target="{{ link.target }}" href="{{ link.href }}">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
-    </section>
+        <div class="kolom kanan kosong">
+            [alla]
+        </div>
+    </div>
+</section>
 
-    <section id="catang">
-        <div id="catanghulu">
-            <h2>My Works</h2>
-            <p>I mainly work on three things: Comic, Illustration, and Worldbuilding.</p>
-            <ul class="totombol">
-                <li class="tombolan"><a href="#gawe-komik">Comic</a></li>
-                <li class="tombolan"><a href="#gawe-gambar">Illustration</a></li>
-                <li class="tombolan"><a href="#gawe-cipbun">Worldbuilding</a></li>
-            </ul>
-        </div>
-        <div id="catangisi">
-            <div id="gawe-komik" class="gawe-hareup">
-                <h3>Comic</h3>
-                <p>Several comics I made between 2018--present. I keep the language as it is since the language I used for the comic is the one that I intended on the planning.</p>
-                <div id="galeri-komik" class="galeri">
-                    <ul class="galeri sama sizeA4 port">
-                        {%- for wadah in collections.comic %}
-                            {%- if loop.index <= 4 -%}
-                                {{ galeri(
-                                    linkHref = wadah.url,
-                                    linkTitle = wadah.data.title,
-                                    imgSrc = wadah.data.thumb,
-                                    imgAlt = wadah.data.imgDesc,
-                                    imgCap = wadah.data.title,
-                                    imgDesc = wadah.data.imgDesc
-                                ) }}
-                            {%- endif -%}
-                        {%- endfor -%}
-                    </ul>
-                </div>
-                <p class="more-gawe"><a href="/works/comic">more comic works ></a></p>
-            </div>
-            <div id="gawe-gambar" class="gawe-hareup">
-                <h3>Illustration</h3>
-                <p>I have several kind of rendering styles.</p>
-                <div id="galeri-gambar" class="galeri">
-                    <ul class="galeri">
-                        {%- for wadah in collections.illus %}
-                            {%- if loop.index <= 4 -%}
-                                {{ galeri(
-                                    linkHref = wadah.url,
-                                    linkTitle = wadah.data.title,
-                                    imgSrc = wadah.data.thumb,
-                                    imgAlt = wadah.data.imgDesc,
-                                    imgCap = wadah.data.title,
-                                    imgDesc = wadah.data.imgDesc
-                                ) }}
-                            {%- endif -%}
-                        {%- endfor -%}
-                    </ul>
-                </div>
-                <p class="more-gawe"><a href="/works/illustration">more illustration works ></a></p>
-            </div>
-            <div id="gawe-cipbun" class="gawe-hareup">
-                <h3>Worldbuilding</h3>
-                <p>My main hobby is actually doing fantasy worldbuilding. My main worldbuilding project is Tagalbuni, but there are also several other projects I am currently developing.</p>
-                <div id="galeri-cipbun" class="galeri">
-                    <ul class="galeri size16-19">
-                        {%- for wadah in collections.wb %}
-                            {%- if loop.index <= 4 -%}
-                                {{ galeri(
-                                    linkHref = wadah.url,
-                                    linkTitle = wadah.data.title,
-                                    imgSrc = wadah.data.thumb,
-                                    imgAlt = wadah.data.imgDesc,
-                                    imgCap = wadah.data.title,
-                                    imgDesc = wadah.data.imgDesc
-                                ) }}
-                            {%- endif -%}
-                        {%- endfor -%}
-                    </ul>
-                </div>
-                <p class="more-gawe"><a href="/works/worldbuilding">more worldbuilding works ></a></p>
+<section id="catang">
+    <nav id="catanghulu">
+        <ul class="totombol">
+            <li class="tombolan"><a href="#gawe-komik">Comic</a></li>
+            <li class="tombolan"><a href="#gawe-gambar">Illustration</a></li>
+            <li class="tombolan"><a href="#gawe-cipbun">Worldbuilding</a></li>
+        </ul>
+    </nav>
+    <div id="catangisi">
+        <div id="gawe-komik" class="gawe-hareup">
+            <div class="info-gawe">
+                <h2>Comic</h2>
+                <p>
+                    Several comic works I created since 2017. The majority of them are black and white, but I have also sometimes experimenting with colored comics.
+                </p>
+                <p>
+                    I have kept the language in each comic unchanged from the original story as the word-choices played a big role in determining how I storyboarded them. However, I provide a brief description of each comic on its dedicated page.
+                </p> 
+            </div>               
+            <div class="galeri-gawe galeri">
+                <ul class="galeri sama sizeA4 port">
+                    {%- for wadah in collections.comic %}
+                        {%- if loop.index <= 5 -%}
+                            {{ galeri(
+                                linkHref = wadah.url,
+                                linkTitle = wadah.data.title,
+                                imgSrc = wadah.data.thumb,
+                                imgAlt = wadah.data.imgDesc,
+                                imgCap = wadah.data.title,
+                                imgDesc = wadah.data.imgDesc
+                            ) }}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    <li class="keluku more-link">
+                        <a href="/works/comic" title="More comic works">
+                            <p>
+                                More Comics
+                            </p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+        <div id="gawe-gambar" class="gawe-hareup">
+            <div class="info-gawe">
+                <h2>Illustration</h2>
+                <p>Several illustrations and fanart pieces I've created. Some of them are part of my personal projects, refreshing, and samples for commissions.</p>
+            </div>
+            <div class="galeri-gawe galeri">
+                <ul class="galeri">
+                    {%- for wadah in collections.illus %}
+                        {%- if loop.index <= 7 -%}
+                            {{ galeri(
+                                linkHref = wadah.url,
+                                linkTitle = wadah.data.title,
+                                imgSrc = wadah.data.thumb,
+                                imgAlt = wadah.data.imgDesc,
+                                imgCap = wadah.data.title,
+                                imgDesc = wadah.data.imgDesc
+                            ) }}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    
+                    <li class="keluku more-link">
+                        <a href="/works/illustration" title="More illustration works">
+                            <p>
+                                More Illustrations
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="gawe-cipbun" class="gawe-hareup">
+            <div class="info-gawe">
+                <h2>Worldbuilding</h2>
+                <p>
+                    My main hobby is actually doing fantasy worldbuilding. My main worldbuilding project is Tagalbuni, but there are also several other projects I am currently developing.
+                </p>
+                <p>
+                    The project consists of many aspects of worldbuilding: cartography, magic and technology systems, culture and language, and also some speculative biology.
+                </p>
+            </div>
+            <div class="galeri-gawe galeri">
+                <ul class="galeri size16-19">
+                    {%- for wadah in collections.wb %}
+                        {%- if loop.index <= 5 -%}
+                            {{ galeri(
+                                linkHref = wadah.url,
+                                linkTitle = wadah.data.title,
+                                imgSrc = wadah.data.thumb,
+                                imgAlt = wadah.data.imgDesc,
+                                imgCap = wadah.data.title,
+                                imgDesc = wadah.data.imgDesc
+                            ) }}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    <li class="keluku more-link">
+                        <a href="/works/worldbuilding" title="More Worldbuilding works">
+                            <p>
+                                More Worldbuilding
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav id="nav-akhir">
+    <ul>
+        <li><a href="#">Back to top</a></li>
+        <li><a href="https://vgen.co/budkalon">Commission Me</a></li>
+    </ul>
+</nav>

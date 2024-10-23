@@ -1,22 +1,28 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="color-scheme" content="dark only" />
-<meta name="description" content="{{ data.headContent.siteDesc }}" />
-<meta name="keywords" content="{{ data.headContent.siteKey }}" />
 <title>
     {{ title }} {%- if (pageType != "home") -%} &nbsp;| Budkalon{%- else -%}{%- endif -%}
 </title>
+{#===META INFO===#}
+<meta name="color-scheme" content="dark only" />
+<meta name="description" content="{{ data.headContent.siteDesc }}" />
+<meta name="keywords" content="{{ data.headContent.siteKey }}" />
+{#===OPEN GRAPH META===#}
 <meta property="og:site_name" content="{{ data.headContent.siteTitle }}" />
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{ description | default(data.headContent.siteDesc) }}" />
-<meta property="og:image" content="{{ featuredImg | default(data.headContent.siteImg) }}" />
+<meta property="og:image" content="{{ thumb.wide | default(data.headContent.siteImg) }}" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1280" />
-<meta property="og:image:height" content="800" />
+<meta property="og:image:height" content="720" />
 <meta property="og:url" content="{{ page.url | urlize }}" />
 <meta property="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="{{ page.url | urlize }}" />
+{#===PRECONNECT===#}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href='//blogger.googleusercontent.com' rel='dns-prefetch'/>
 {#===ICON===#}
 <link rel="icon" type="image/png" href="/assets/img/favicon-48x48.png" sizes="48x48" />
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
@@ -24,10 +30,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="Budkalon" />
 <link rel="manifest" href="/assets/img/site.webmanifest" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{#===FONTS===#}
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-<link href='//blogger.googleusercontent.com' rel='dns-prefetch'/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=home,palette,settings&display=block" rel="stylesheet" />
+{#===STYLE===#}
 <link rel="stylesheet" href="/assets/style.css">

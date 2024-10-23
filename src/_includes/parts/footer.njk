@@ -3,8 +3,12 @@
 <footer id="sukutama">
     <div class="kokolom">
         <div class="kolom kiri">
-            Budkalon's Personal Website <br>
-            Copyright&copy;{{ tahunIni }}, Budkalon Zetya. All rights reserved.
+            <p>
+                Budkalon's Personal Website
+            </p>
+            <p>
+                Copyright&copy;{{ tahunIni }}, Budkalon Zetya. All rights reserved.
+            </p>
         </div>
         <div class="kolom kanan">
             <ul class="larink small">
@@ -15,6 +19,13 @@
                         target = link.target
                     ) }}
                 {% endfor %}
+                {% if pageType != 'home' %}
+                    <li class="navan cta">
+                        <a target="_blank" title="Commission em on VGen" href="https://vgen.co/budkalon">
+                            Commission Me
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>

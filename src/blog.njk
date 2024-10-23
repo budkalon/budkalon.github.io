@@ -2,15 +2,15 @@
 title: Blog
 layout: layouts/blogList.njk
 pageType: blogIndex
+heroImg: heroImg.jpg
+thumb: imageBlog.jpg
+pageCollective: multiple
 pagination:
   data: collections.post
   size: 2
   alias: posts
   reverse: true
 permalink: /blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html
-pageCollective: multiple
-thumb: imageBlog.jpg
-heroImg: heroImg.jpg
 ---
 {% from "macro/list.njk" import artikel %}
 
