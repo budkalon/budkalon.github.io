@@ -1,8 +1,8 @@
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("./src/assets/");
-    eleventyConfig.addWatchTarget("./src/assets/");
+    eleventyConfig.addPassthroughCopy("./_src/assets/");
+    eleventyConfig.addWatchTarget("./_src/assets/");
 
     eleventyConfig.addShortcode("tahunIni", () => `${new Date().getFullYear()}`);
 
