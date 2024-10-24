@@ -1,7 +1,0 @@
-{
-    "pageType": "blog",
-    "layout": "layouts/blog.njk",
-    "author": "Budkalon",
-    "authorLink": "https://budkalon.crd.co",
-    "pageCollective": "single"
-}
