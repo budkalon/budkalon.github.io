@@ -16,6 +16,11 @@ chapter:
   - title: Zombie Bakery
     pages: 72
     published: 2022-10-19
+outlink:
+  - name: Pre-Order
+    href: form
+    target: _blank
+    disabled: false
 preview:
   - img: page1.jpg
     cap: page 1

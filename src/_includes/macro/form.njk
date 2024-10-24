@@ -1,0 +1,59 @@
+{#===TEXT===#}
+{% macro inputText(name, type, label, desc, placeholder, required) %}
+    <h3 class="qtitle" id="{{ name }}-title">
+        <label for="{{ name }}">
+            {{ label }}
+        </label>
+    </h3>
+    <div class="qholder" id="{{ name }}-holder">
+        <p class="qdesc" id="{{ name }}-desc">
+            {{ desc }}
+        </p>
+        <input aria-describedby="{{ name }}-desc" aria-labelledby="{{ name }}-title" required="{{ required }}" aria-required="{{ required }}"  data-originally-required="{{ required }}" placeholder="{{ placeholder }}" id="{{ name }}" type="{{ type }}">
+    </div>
+{% endmacro %}
+
+{#===EMAIL===#}
+{% macro inputEmail(name1, name2, label, desc1, desc2, placeholder1, placeholder2, required) %}
+    <h3 class="qtitle" id="{{ name }}-title">
+        <label for="{{ name }}">
+            {{ label }}
+        </label>
+    </h3>
+    <div class="qholder" id="{{ name1 }}-holder">
+        <p class="qdesc" id="{{ name1 }}-desc">
+            {{ desc1 }}
+        </p>
+        <input aria-describedby="{{ name1 }}-desc" aria-labelledby="{{ name1 }}-title" required="{{ required }}" aria-required="{{ required }}"  data-originally-required="{{ required }}" placeholder="{{ placeholder1 }}" id="{{ name1 }}" type="email">
+    </div>
+    <div class="qholder" id="{{ name2 }}-holder">
+        <p class="qdesc" id="{{ name2 }}-desc">
+            {{ desc2 }}
+        </p>
+        <input aria-describedby="{{ name2 }}-desc" aria-labelledby="{{ name1 }}-title" required="{{ required }}" aria-required="{{ required }}"  data-originally-required="{{ required }}" placeholder="{{ placeholder2 }}" id="{{ name2 }}" type="email">
+    </div>
+{% endmacro %}
+
+{#===RADIO-CHECKBOX===#}
+{% macro inputRadio(type, name, label, desc, choice = [{val: "", label: ""}]) %}
+    <h3 class="qtitle" id="{{ name }}-title">
+        <label for="{{ name }}">
+            {{ label }}
+        </label>
+    </h3>
+    <div class="qholder" id="{{ name }}-holder">
+        <p class="qdesc" id="{{ name }}-desc">
+            {{ desc }}
+        </p>
+        <div class="radio-container">
+            {% for cho in choice %}
+                <div class="radio-choice">
+                    <input aria-labelledby='{{ name }}-title' id='{{ name }}_{{ cho.val }}' type='{{ type }}' value='{{ cho.val }}'/>
+                    <label class='radiolabel' for='{{ name }}_{{ cho.val }}' id='{{ name }}_{{ cho.val }}-Label'>
+                        <span class='radio-label'>{{ cho.label }}</span>
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}

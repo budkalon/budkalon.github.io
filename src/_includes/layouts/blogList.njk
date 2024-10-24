@@ -17,7 +17,11 @@ layout: layouts/base.njk
         <div id="senarai-kategori">
             <ul class="totombol vertikal">
                 {% for category in collections.categories %}
-                    <li class="tombolan"><a title="{{ category }}" href="/blog/category/{{ category }}">{{ category }}</a></li>
+                    <li class="tombolan">
+                        <a title="{{ category }}" href="/blog/category/{{ category }}">
+                            {{ category }}
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
